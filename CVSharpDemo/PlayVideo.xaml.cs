@@ -20,14 +20,15 @@ namespace CVSharpDemo
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            PlayFromFile(@"E:\电影\生化危机：诅咒.720p.BD中英双字幕.rmvb");
+            PlayFromCapture();
+            //PlayFromFile(@"E:\电影\生化危机：诅咒.720p.BD中英双字幕.rmvb");
         }
 
         private void PlayFromCapture()
         {
             Task.Run(() =>
             {
-                var cap = new VideoCapture(0);
+                var cap =new VideoCapture(0,VideoCaptureAPIs.DSHOW);
                 using (Mat img = new Mat())
                 {
                     while (true)
@@ -38,10 +39,7 @@ namespace CVSharpDemo
                             break;
                         }
 
-                        var img1 = new Mat(img.Size(), MatType.CV_8UC1);
-                        Cv2.CvtColor(img, img1, ColorConversionCodes.BGR2GRAY);
-
-                        var bitmap = img1.ToWriteableBitmap().ToBitmapImage();
+                        var bitmap = img.ToWriteableBitmap().ToBitmapImage();
                         if (Application.Current != null)
                         {
                             Dispatcher.Invoke(new Action(() =>
