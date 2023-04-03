@@ -11,11 +11,16 @@
     Height="1080"
     Closing="Window_Closing"
     mc:Ignorable="d">
-    <UniformGrid Columns="4" Rows="3">
+    <UniformGrid Columns="8" Rows="5">
         <Button
             Width="80"
             Height="30"
             Click="Button_Click"
             Content="播放视频" />
+        <Button
+            Width="80"
+            Height="30"
+            Click="Button_Click_1"
+            Content="绘制" />
     </UniformGrid>
 </Window>
