@@ -11,16 +11,14 @@
     Height="1080"
     Closing="Window_Closing"
     mc:Ignorable="d">
-    <UniformGrid Columns="8" Rows="5">
-        <Button
-            Width="80"
-            Height="30"
-            Click="Button_Click"
-            Content="播放视频" />
-        <Button
-            Width="80"
-            Height="30"
-            Click="Button_Click_1"
-            Content="绘制" />
+    <UniformGrid Columns="4" Rows="3">
+        <UniformGrid.Resources>
+            <Style TargetType="Button">
+                <Setter Property="Height" Value="30" />
+                <Setter Property="Width" Value="80" />
+            </Style>
+        </UniformGrid.Resources>
+        <Button Click="Play_Video" Content="播放视频" />
+        <Button Click="Temp_Match" Content="模板匹配" />
     </UniformGrid>
 </Window>

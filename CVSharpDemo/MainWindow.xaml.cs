@@ -34,14 +34,14 @@ namespace CVSharpDemo
             App.Current.Shutdown();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Play_Video(object sender, RoutedEventArgs e)
         {
             new PlayVideo().Show();
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void Temp_Match(object sender, RoutedEventArgs e)
         {
-            new Draw().Show();
+            new TempMatch().Show();
         }
     }
 }
