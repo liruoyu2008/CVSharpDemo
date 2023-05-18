@@ -9,9 +9,58 @@
     Width="1440"
     Height="900"
     Loaded="Window_Loaded"
+    PreviewKeyDown="Window_PreviewKeyDown"
+    PreviewKeyUp="Window_PreviewKeyUp"
     WindowStartupLocation="CenterScreen"
     mc:Ignorable="d">
     <Grid>
-        <Image Name="image" />
+        <Grid.RowDefinitions>
+            <RowDefinition Height="8*" />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Image Name="image1" />
+        <Image Name="image2" Grid.Column="1" />
+        <TextBlock
+            Name="tb1"
+            Grid.Row="1"
+            Height="30"
+            HorizontalAlignment="Center"
+            FontSize="24" />
+        <TextBlock
+            Name="tb2"
+            Grid.Row="1"
+            Grid.Column="1"
+            Height="30"
+            HorizontalAlignment="Center"
+            FontSize="24" />
+        <Slider
+            Name="slider"
+            Grid.Row="2"
+            Grid.ColumnSpan="2"
+            Maximum="75575"
+            SmallChange="1"
+            Thumb.DragCompleted="slider_DragCompleted"
+            Thumb.DragStarted="slider_DragStarted"
+            ValueChanged="slider_ValueChanged" />
+        <TextBlock
+            Name="tb3"
+            Grid.Row="3"
+            Grid.ColumnSpan="2"
+            Height="30"
+            HorizontalAlignment="Center"
+            FontSize="24" />
+        <TextBlock
+            Name="tb4"
+            Grid.Row="3"
+            Grid.Column="1"
+            Height="30"
+            HorizontalAlignment="Right"
+            FontSize="24" />
     </Grid>
 </Window>
