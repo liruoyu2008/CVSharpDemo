@@ -20,5 +20,6 @@
         </UniformGrid.Resources>
         <Button Click="Play_Video" Content="播放视频" />
         <Button Click="Temp_Match" Content="模板匹配" />
+        <Button Click="Face_Detect"  Content="人脸检测" />
     </UniformGrid>
 </Window>
